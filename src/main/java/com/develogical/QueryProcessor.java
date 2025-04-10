@@ -30,6 +30,17 @@ public class QueryProcessor {
         int num2 = Integer.parseInt(matcher.group(2));
 
         return String.valueOf((num1*num2));
-    }
+    }}
+      if (query.toLowerCase().contains("minus")) {
+        String input = query.toLowerCase();
+        Pattern pattern = Pattern.compile("(\\d+)\\s+minus\\s+(\\d+)");
+        Matcher matcher = pattern.matcher(input);
+
+        if (matcher.find()) {
+          int num1 = Integer.parseInt(matcher.group(1));
+          int num2 = Integer.parseInt(matcher.group(2));
+
+          return String.valueOf((num1-num2));
+        }
   }
    return "";}}

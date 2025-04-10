@@ -38,9 +38,9 @@ public class QueryProcessorTest {
   }
 
   @Test
-  public void WhatIs18Minus41() throws Exception {
-    assertThat(queryProcessor.process("What is 18 minus by 41?"),
-            containsString(""));
+  public void WhatisAMinusB() throws Exception {
+    assertThat(queryProcessor.process("What is 8 minus 3?"),
+            containsString("5"));
   }
 
 
