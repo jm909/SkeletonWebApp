@@ -43,5 +43,9 @@ public class QueryProcessorTest {
             containsString("5"));
   }
 
-
+  @Test
+  public void WhatisAPlusB() throws Exception {
+    assertThat(queryProcessor.process("What is 8 plus 3?"),
+            containsString("11"));
+  }
 }
