@@ -24,5 +24,11 @@ public class QueryProcessorTest {
   public void knowsTeamName() throws Exception {
     assertThat(queryProcessor.process("What is your name?"), containsString("RobTeam"));
   }
+  @Test
+  public void WhatIs75Times99() throws Exception {
+    assertThat(queryProcessor.process("What is 75 multiplied by 99?"),
+            containsString("7425"));
+  }
+
 
 }
