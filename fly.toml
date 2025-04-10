@@ -1,5 +1,5 @@
 # Change the following line to match your own app name.
-app = "white-night-7219"
+app = "muddy-sound-4791"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
