@@ -31,4 +31,17 @@ public class QueryProcessorTest {
   }
 
 
+  @Test
+  public void MultiplyAandB() throws Exception {
+    assertThat(queryProcessor.process("What is 8 multiplied by 76?"),
+            containsString("608"));
+  }
+
+  @Test
+  public void WhatIs18Minus41() throws Exception {
+    assertThat(queryProcessor.process("What is 18 minus by 41?"),
+            containsString(""));
+  }
+
+
 }

@@ -1,4 +1,7 @@
 package com.develogical;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class QueryProcessor {
 
@@ -17,8 +20,16 @@ public class QueryProcessor {
     }
 
 
-    if (query.toLowerCase().contains("what is 75 multiplied by 99?")) {
-      return "7425";
+    if (query.toLowerCase().contains("multiplied by")) {
+      String input = query.toLowerCase();
+      Pattern pattern = Pattern.compile("(\\d+)\\s+multiplied by\\s+(\\d+)");
+      Matcher matcher = pattern.matcher(input);
 
+      if (matcher.find()) {
+        int num1 = Integer.parseInt(matcher.group(1));
+        int num2 = Integer.parseInt(matcher.group(2));
+
+        return String.valueOf((num1*num2));
     }
+  }
    return "";}}
